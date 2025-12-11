@@ -152,7 +152,7 @@ h2 {
 }
 
 .slide-overlay p.tagline {
-    color: white; /* या Hex code: #FFFFFF */
+    color: white; /* Hex code: #FFFFFF */
     font-size: 1.2em;
     margin-bottom: 15px;
 }
@@ -202,13 +202,13 @@ h2 {
     margin-bottom: 10px;
 }
 
-/* --- Featured Products Section: Alignment Fixes Applied --- */
+/* --- Featured Products Section: --- */
 .product-grid {
     display: grid;
     /* 3 cards per row on large screens */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
     gap: 25px;
-    align-items: stretch; /* Crucial for making cards the same height */
+    align-items: stretch;
 }
 
 .product-card {
@@ -218,36 +218,35 @@ h2 {
     overflow: hidden;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     
-    /* Make the card a Flex container to structure content */
     display: flex;
     flex-direction: column;
     transition: transform 0.3s;
 }
 
 .product-card:hover {
-    transform: translateY(-5px); /* Simple hover effect */
+    transform: translateY(-5px); 
 }
 
 
 .product-card > img {
     width: 100%;
-    height: 200px; /* <--- Fixed Height for all product images */
-    object-fit: cover; /* This crops the image to fit, maintaining aspect ratio */
+    height: 200px; 
+    object-fit: cover; 
 }
 
 .card-details {
     padding: 20px;
-    flex-grow: 1; /* Allows this section to fill remaining space */
+    flex-grow: 1; 
     display: flex;
     flex-direction: column;
-    /* Ensure content is distributed and the button is pushed to the bottom */
+ 
     justify-content: space-between; 
 }
 
 .card-details p {
     font-size: 0.95em;
     color: #6c757d;
-    min-height: 40px; /* Space for approximately two lines of text */
+    min-height: 40px; 
     overflow: hidden;
     margin: 10px 0;
 }
@@ -281,7 +280,7 @@ h2 {
     margin-top: 15px;
     background-color: #28a745;
     color: white;
-    align-self: flex-end; /* Pushes the button to the bottom */
+    align-self: flex-end; 
     padding: 12px 0;
     border-radius: 5px;
     font-size: 1em;
@@ -351,7 +350,7 @@ footer {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 60px; /* Adjusted to fit below header */
+        top: 60px;
         left: 0;
         width: 100%;
         background-color: #343a40;
