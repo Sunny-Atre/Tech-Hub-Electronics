@@ -1,0 +1,400 @@
+/* --- Global Reset and Basic Styling (Very Important) --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Prevent layout break */
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+section {
+    padding: 60px 8%;
+}
+
+h2 {
+    font-size: 2.2em;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #343a40;
+}
+
+/* --- Buttons --- */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    border: none;
+}
+
+.primary-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.primary-btn:hover {
+    background-color: #0056b3;
+}
+
+.card-btn {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    background-color: #28a745;
+    color: white;
+    align-self: flex-end;
+}
+
+.card-btn:hover {
+    background-color: #218838;
+}
+
+/* --- Header & Nav --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    background-color: #343a40;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo h1 {
+    font-size: 1.5em;
+    color: #007bff;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li a {
+    color: white;
+    margin-left: 20px;
+    padding: 5px 0;
+    text-decoration: none;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.4em;
+    cursor: pointer;
+}
+
+/* --- Slideshow Section --- */
+.slideshow-section {
+    padding: 0;
+    height: 65vh; /* Adjusted height */
+    overflow: hidden;
+}
+
+.slider-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide-images {
+    height: 100%;
+    width: 300%;
+    display: flex;
+    animation: slide-movement 15s infinite alternate;
+}
+
+.slide {
+    width: 33.333%;
+    position: relative;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures uniform coverage */
+}
+
+/* Overlay and Text Positioning */
+.slide-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px; 
+}
+
+.slide-overlay h2 {
+    color: white;
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.slide-overlay p.tagline {
+    color: white; /* या Hex code: #FFFFFF */
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+/* --- The Magic: CSS Keyframes --- */
+@keyframes slide-movement {
+    0% { margin-left: 0%; }
+    30% { margin-left: 0%; }
+
+    33% { margin-left: -100%; }
+    63% { margin-left: -100%; }
+
+    66% { margin-left: -200%; }
+    96% { margin-left: -200%; }
+
+    100% { margin-left: 0%; }
+}
+
+/* --- Categories Section --- */
+.category-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.category-card {
+    text-align: center;
+    padding: 30px 20px; 
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 200px; /* Adjusted width */
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.category-card:hover {
+    background-color: #e9f2ff;
+}
+
+.category-card i {
+    font-size: 3em;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+/* --- Featured Products Section: Alignment Fixes Applied --- */
+.product-grid {
+    display: grid;
+    /* 3 cards per row on large screens */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 25px;
+    align-items: stretch; /* Crucial for making cards the same height */
+}
+
+.product-card {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    
+    /* Make the card a Flex container to structure content */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px); /* Simple hover effect */
+}
+
+
+.product-card > img {
+    width: 100%;
+    height: 200px; /* <--- Fixed Height for all product images */
+    object-fit: cover; /* This crops the image to fit, maintaining aspect ratio */
+}
+
+.card-details {
+    padding: 20px;
+    flex-grow: 1; /* Allows this section to fill remaining space */
+    display: flex;
+    flex-direction: column;
+    /* Ensure content is distributed and the button is pushed to the bottom */
+    justify-content: space-between; 
+}
+
+.card-details p {
+    font-size: 0.95em;
+    color: #6c757d;
+    min-height: 40px; /* Space for approximately two lines of text */
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.price {
+    display: block;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #007bff;
+    margin-top: 5px;
+}
+
+.badge {
+    background-color: #28a745;
+    color: white;
+    padding: 4px 8px;
+    font-size: 0.75em;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    display: inline-block;
+    font-weight: 600;
+}
+
+.badge.sale {
+    background-color: #007bff;
+}
+
+.card-btn {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    background-color: #28a745;
+    color: white;
+    align-self: flex-end; /* Pushes the button to the bottom */
+    padding: 12px 0;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+
+/* --- Contact Section (Simple Form Styling) --- */
+
+.contact-subtitle {
+    text-align: center;
+    margin-bottom: 25px; 
+}
+.simple-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 25px 30px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+}
+
+.simple-form input[type="text"],
+.simple-form input[type="email"],
+.simple-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.simple-form input[type="text"]:focus,
+.simple-form input[type="email"]:focus,
+.simple-form textarea:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.simple-form button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1em;
+    border-radius: 5px;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 20px 8%;
+    background-color: #343a40;
+    color: #bbb;
+    font-size: 0.9em;
+}
+
+/* ------------------------------------- */
+/* Responsive Design (Media Queries) */
+/* ------------------------------------- */
+
+@media (max-width: 768px) {
+    /* Mobile Nav Toggle */
+    .header {
+        padding: 15px 5%;
+    }
+    .navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjusted to fit below header */
+        left: 0;
+        width: 100%;
+        background-color: #343a40;
+        padding-bottom: 10px;
+    }
+    .navbar ul {
+        flex-direction: column;
+    }
+    .navbar ul li {
+        text-align: center;
+        margin: 5px 0;
+    }
+    .navbar ul li a {
+        padding: 10px 0;
+    }
+    .navbar.active {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Layout adjustments */
+    section {
+        padding: 40px 5%;
+    }
+    .slideshow-section {
+        height: 50vh;
+    }
+    .slide-overlay h2 {
+        font-size: 2em;
+    }
+    /* Product Grid on Mobile: One column */
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    /* Categories on Mobile: Two cards per row */
+    .category-grid {
+        gap: 15px;
+    }
+    .category-card {
+        width: 45%; 
+        padding: 20px 15px;
+    }
+}

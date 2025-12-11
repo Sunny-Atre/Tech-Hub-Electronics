@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Hub | Latest Electronics & Gadgets</title>
+    <link rel="stylesheet" href="style.css"> 
+    <script src="https://kit.fontawesome.com/your-own-kit-id.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <h1>Tech Hub</h1>
+        </div>
+        <nav class="navbar" id="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#featured">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <section id="home" class="slideshow-section">
+        <div class="slider-container">
+            <div class="slide-images">
+                
+                <div class="slide">
+                    <img src="assets/slide-laptop.jpg" alt="Featured Laptop">
+                    <div class="slide-overlay">
+                        <p class="tagline">The Future is Here.</p>
+                        <h2>Latest Laptops & PCs</h2>
+                        <a href="#featured" class="btn primary-btn">Shop Laptops</a>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="assets/slide-mobile.jpg" alt="Featured Smartphone">
+                    <div class="slide-overlay">
+                        <p class="tagline">Capture Every Moment.</p>
+                        <h2>Next-Gen Smartphones 5G</h2>
+                        <a href="#featured" class="btn primary-btn">Shop Phones</a>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="assets/slide-audio.jpg" alt="Featured Audio">
+                    <div class="slide-overlay">
+                        <p class="tagline">Pure Sound Quality.</p>
+                        <h2>Noise-Cancelling Audio Gear</h2>
+                        <a href="#featured" class="btn primary-btn">Shop Audio</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <section id="categories" class="categories-section">
+        <h2>Shop By Category</h2>
+        <div class="category-grid">
+            <a href="#featured" class="category-card"><i class="fas fa-mobile-alt"></i><h3>Smartphones</h3></a>
+            <a href="#featured" class="category-card"><i class="fas fa-laptop"></i><h3>Laptops</h3></a>
+            <a href="#featured" class="category-card"><i class="fas fa-headphones-alt"></i><h3>Audio</h3></a>
+            <a href="#featured" class="category-card"><i class="fas fa-charging-station"></i><h3>Accessories</h3></a>
+        </div>
+    </section>
+
+    <section id="featured" class="featured-section">
+        <h2>Our Top Selling Products</h2>
+        
+        <div class="product-grid">
+            
+            <div class="product-card" data-category="mobile">
+                <img src="assets/product-phone.jpg" alt="Latest Smartphone">
+                <div class="card-details">
+                    <span class="badge">New</span>
+                    <h3>Iphone 16 </h3>
+                    <p>6.7" OLED, 128GB, Triple Camera.</p>
+                    <span class="price">₹45,999</span>
+                    <a href="#" class="btn card-btn">Add to Cart</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="laptop">
+                <img src="assets/product-laptop.jpg" alt="Gaming Laptop">
+                <div class="card-details">
+                    <h3>Ultra Gaming Laptop 15"</h3>
+                    <p>i7 Processor, 16GB RAM, Dedicated GPU.</p>
+                    <span class="price">₹85,500</span>
+                    <a href="#" class="btn card-btn">Add to Cart</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="audio">
+                <img src="assets/product-headphones.jpg" alt="Noise Cancelling Headphones">
+                <div class="card-details">
+                    <h3>Noise-Cancelling Headphones</h3>
+                    <p>50-hour battery life, supreme comfort.</p>
+                    <span class="price">₹8,999</span>
+                    <a href="#" class="btn card-btn">Add to Cart</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="accessory">
+                <img src="assets/product-watch.jpg" alt="Smart Watch">
+                <div class="card-details">
+                    <span class="badge sale">Sale</span>
+                    <h3>Smart Watch Fitness Tracker</h3>
+                    <p>Heart Rate Monitor, GPS, Waterproof.</p>
+                    <span class="price">₹6,499</span>
+                    <a href="#" class="btn card-btn">Add to Cart</a>
+                </div>
+            </div>
+            
+            <div class="product-card" data-category="accessory">
+                <img src="assets/product-powerbank.jpg" alt="High Capacity Power Bank">
+                <div class="card-details">
+                    <h3>20000mAh Power Bank</h3>
+                    <p>Fast charging, Dual USB output.</p>
+                    <span class="price">₹1,999</span>
+                    <a href="#" class="btn card-btn">Add to Cart</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="mobile">
+                <img src="assets/product-tablet.jpg" alt="Tablet">
+                <div class="card-details">
+                    <h3>Compact Pro Tablet 10"</h3>
+                    <p>Lightweight, perfect for media consumption.</p>
+                    <span class="price">₹28,000</span>
+                    <a href="#" class="btn card-btn">Add to Cart</a>
+                </div>
+            </div>
+            
+            <div class="product-card" data-category="audio">
+                <img src="assets/product-speaker.jpg" alt="Bluetooth Speaker">
+                <div class="card-details">
+                    <h3>Portable Bluetooth Speaker</h3>
+                    <p>Deep bass, IPX7 waterproof rating.</p>
+                    <span class="price">₹3,499</span>
+                    <a href="#" class="btn card-btn">Add to Cart</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="laptop">
+                <img src="assets/product-monitor.jpg" alt="Gaming Monitor"> 
+                <div class="card-details">
+                    <h3>27" 4K Monitor</h3>
+                    <p>IPS Panel, 144Hz Refresh Rate.</p>
+                    <span class="price">₹22,999</span>
+                    <a href="#" class="btn card-btn">Add to Cart</a>
+                </div>
+            </div>
+
+        </div> 
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Get In Touch</h2>
+        <p class="contact-subtitle">Have a question? Fill out the form below.</p>
+        <form id="contact-form" class="simple-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Query" rows="5" required></textarea>
+            <button type="submit" class="btn primary-btn">Send Message</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>© 2025 Tech Hub. All rights reserved. | Designed by Sunny Atre</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
